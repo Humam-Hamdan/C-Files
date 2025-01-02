@@ -28,7 +28,7 @@ int main(void)
 					switch(dritte)
 					{
 						case 0:
-							printf("Hallo Tuff!");
+							printf("Hallo Tuffi!");
 							break;
 						case 1:
 							printf("Dann schau in den Spiegel!");
