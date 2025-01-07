@@ -54,6 +54,9 @@ float potenz_rek(float x, int n, int* z) {
 
     float half_pow = potenz_rek(x, n / 2, z);
 
+    // B16 bei ungerade passt das zwar mit >>x * half_pow * half_pow<<
+    // Das ist jedoch nicht schön gelöst mit dem Abschneiden ...
+
     if (n_even) {
         return half_pow * half_pow; 
         // x^(n/2) * x^(n/2) for even n
