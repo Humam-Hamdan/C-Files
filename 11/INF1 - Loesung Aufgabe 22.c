@@ -24,7 +24,32 @@ typedef struct Note{
 }Note;
 
 void RedaWrite(Note *n){
-
+    scanf("%s %i %f", n->Nachname, &n->MatrikelNum, &n->Note);
 }
 
-// So, in the main function just take an input, and then make it in a while sothat for i<num then makes a Notei and calls read write, when you break then call the other function which gives you those who passed
+void Passed(Note *n, int pass_grade, int examinees){
+    for(int i=0; i<examinees; i++){
+        if(n[i].Note >= pass_grade){
+            printf("%s passed with %f, the MatNum is %i\n", n[i].Nachname,n[i].Note,n[i].MatrikelNum);
+        }
+    }
+}
+
+int main(){
+
+    int examinees;
+    printf("how many examinees?\n");
+    scanf("%i", &examinees);
+    Note note[examinees];
+
+    printf("Name Matrikelnummer Note\n");
+    for(int i=0; i< examinees; i++){
+        RedaWrite(&note[i]);
+    }
+
+    int pass_grade;
+    printf("what is the passing grade?\n");
+    scanf("%i", &pass_grade);
+
+    Passed(note, pass_grade, examinees);
+}
