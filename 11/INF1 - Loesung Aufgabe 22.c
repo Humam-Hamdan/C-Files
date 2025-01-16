@@ -27,4 +27,4 @@ void RedaWrite(Note *n){
 
 }
 
-// do not really know how to make it interactive, to be determined.
+// So, in the main function just take an input, and then make it in a while sothat for i<num then makes a Notei and calls read write, when you break then call the other function which gives you those who passed
