@@ -20,7 +20,7 @@ const double M_E = 2.7182818284590452354;
 // Basis für Langzahldarstellung
 enum { BASIS = 10 };
 // Oberschranke für n
-enum { MAX_N = 150 };
+enum { MAX_N = 50 };
 // welche Werte n! werden ausgegeben?
 enum { SCHRITT_N = 1 };
 
@@ -35,11 +35,13 @@ typedef struct Knoten
 typedef Knoten* NatZahl;
 
 // Ausgabe einer natürlichen Zahl, ziffernweise VON VORNE
-void natAusgeben(NatZahl a)
-{
+void natAusgeben(NatZahl a, int* stellen){
   // wenn es noch Ziffern vor der letzten gibt, dann diese zuerst ausgeben (Rekursion!)
-  if (a->rest != NULL)
-    natAusgeben(a->rest);
+  if (a->rest != NULL){
+    natAusgeben(a->rest, stellen);
+    (*stellen)++;
+  }
+
   // letzte Ziffer ausgeben
   printf("%u", a->ziffer);
 }
@@ -94,6 +96,7 @@ void multipliziere(NatZahl a, unsigned long n)
    ausgeben                                                                 */
 int main(void)
 {
+  int stellen;
   // Platz für einziffrige Zahl schaffen
   NatZahl fak = zeigerAufNeueZiffer(1, NULL);
 
@@ -103,8 +106,10 @@ int main(void)
       if (n % SCHRITT_N == 0)
         {
           printf("%4lu! = ", n);
-          natAusgeben(fak);
+          stellen = 1;
+          natAusgeben(fak, &stellen);
           putchar('\n');
+          printf("Anzahl der Ziffern %d", stellen);
           printf("     (Stirlingsche Formel: %e)\n",
                  pow(n / M_E, n) * sqrt(2 * M_PI * n));
         }

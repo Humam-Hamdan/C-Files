@@ -9,8 +9,6 @@
 // Typ des Vertrags
 typedef enum { GEBRAUCHT, NEU, LEASING } Vertragstyp;
 
-// undsigned int just in case, otherwise an int or float would suffice.
-
 // für jedes Fahrzeug notwendige Daten
 typedef struct
 {
@@ -189,6 +187,7 @@ int main(void)
   list->dat.vertrag = NEU;
   list->dat.dat_spez.dat_neu.preis = 45000;
   list->dat.dat_spez.dat_neu.max_rabatt = 4.75;
+  list->rest->rest->rest = NULL; 
 
   // Inhalt der Fahrzeugliste ausgeben
   liste_ausgeben(list);
