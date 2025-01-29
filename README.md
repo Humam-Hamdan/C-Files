@@ -3,5 +3,5 @@
 
 C-Files For INFO1 Course At UniWuppertal WiSe 24/25 Prof. Frommer
 
-
-Added the Repo to the unipc
+13/ : A: porlog & lisp, B: 
+/14 : about make and complexer programs
