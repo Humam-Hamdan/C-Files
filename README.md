@@ -4,9 +4,12 @@ C-Files For INFO-1 Course At Uni-Wuppertal Wi-Se 24/25 Prof. Frommer and also fo
 
 All Course Files are in Info-1-Course/, the structure is:
 
+# Files:
+
 - 13/ : A: porlog & lisp, B: 
 - 14/ : about make and complexer programs
 
+# Short Descriptions
 
 pointer-ueben/ is from the ProgammingWerkstatt of Faculty 6 at Uni-Wuppertal.
 
