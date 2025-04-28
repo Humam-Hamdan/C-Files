@@ -1,0 +1,72 @@
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Insert your solutions here %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\Aufgabe{1}
+Hilfreiche Links:
+\begin{itemize}
+    \item Latex-Tutorial der Uni Graz: 
+    \url{https://latex.tugraz.at/latex/tutorial}
+    \item LaTeX-Symbol Liste: \url{https://ctan.net/info/symbols/comprehensive/symbols-a4.pdf}
+    \item LaTeX-Symbol Suche: \url{http://detexify.kirelabs.org/classify.html}
+\end{itemize}
+
+\Aufgabe{2}
+\begin{enumerate}[a)] %Ersetze [a)] durch [i)] oder gar durch [test3 1 testasdf]
+\item Aufzählungen und Auflistungen lassen sich mittels der enumerate bzw. itemize Umgebung realisieren. Weitere Infos \& Beispiele: 
+\begin{itemize}
+\item \url{https://www.latex-tutorial.com/tutorials/lists/}
+\end{itemize}
+\item Der Mathemodus:
+\begin{itemize} \item Mathematische Symbole und Formeln lassen sich einfach mit zwei \$-Zeichen den Text integrieren: $x = -1$. Eine Formel lässt sich mittels doppelter \$-Zeichen absetzen: $$ x = -1 \Rightarrow x^2 = 1.$$
+    \item Für mehrzeilige Formeln empfiehlt sich die align* Umgebung. Eine align* Umgebung gliedert sich in mehrere Spalten, welche mittels \&-Zeichen getrennt werden. Hiermit können wir zum Beispiel erzwingen, dass die Gleichheitszeichen untereinander stehen.
+  \begin{align*}
+      \sqrt{\frac{16}{36}} &= \frac{4}{6}  \\
+     &= \frac{2}{3}
+  \end{align*}
+  \item 
+ Für (schöne) Äquivalenzumformungen sollte zusätzlich die array Umgebung verwendet werden. Dieser Umgebung teilt man die Anzahl der Spalten sowie dessen Ausrichtung  mit:
+    \begin{align*}
+        \begin{array}{lrcl} % 4 Spalten da 4 Buchstaben im Argument der Array Umgebung. Die Ausrichtung der Spalten ist also (1. Spalte: links, 2. Spalte: rechts, 3. Spalte center (mittig), 4. Spalte links.
+            & x+1 &=& 17 \\
+            \Longleftrightarrow & x &=& 16
+        \end{array}
+    \end{align*}
+  \item
+  Im Gegensatz zur align* Umgebung, erhält in der align Umgebung jede Zeile eine Zahl:
+  \begin{align}
+      y &= 6  \\
+      x &= 7 \label{GleichungX7}
+  \end{align}
+  Sofern wir der Zeile mittels des \texttt{\textbackslash{}label\{labelname\}} Befehls einen Namen gegeben haben, lässt sich diese Zeile mit \texttt{\textbackslash{}ref\{labelname\}} referenzieren: \cref{GleichungX7}.
+\end{itemize}
+\end{enumerate}
+
+\Aufgabe{3}
+LaTeX bietet auch Möglichkeiten für Pseudocodes. Diese Vorlage benutzt für die Umgebung \texttt{algorithm} das Package \texttt{algorithm2e}.
+\begin{itemize}
+\item Dokumentation: \url{http://mirrors.ctan.org/macros/latex/contrib/algorithm2e/doc/algorithm2e.pdf}
+\end{itemize}
+
+\begin{algorithm}[H]
+\SetAlgoLined
+\DontPrintSemicolon
+\KwIn{dieser Text}
+\KwOut{ein Algorithmus in \LaTeX}
+\BlankLine
+initialisiere \tcc*{Kommentar zur aktuellen Zeile}
+\While{noch nicht am Ende des Dokuments}{
+    lies aktuellen Abschnitt\;
+    \eIf{verstanden}{
+        gehe zum nächsten Abschnitt\;
+    }{
+        gehe zurück zum Beginn des aktuellen Abschnitts\;
+    }
+}
+\caption{Wie man Algorithmen schreibt}
+\end{algorithm}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

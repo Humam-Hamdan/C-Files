@@ -1,0 +1,173 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=2.5cm]{geometry}
+\setlength{\headheight}{1cm}
+\usepackage{fancyhdr}
+\usepackage[ngerman,german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,onelanguage]{algorithm2e}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage[german]{cleveref}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% EDIT THIS PART %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Fach}{Algorithmen und Datenstrukturen}
+\newcommand{\Name}{Ammar Saleh - 2329470} 
+\newcommand{\name}{Humam Hamdan - 2427300}
+\newcommand{\Gruppe}{4}
+\newcommand{\Semester}{Sommersemester 2025}
+\newcommand{\Uebungsblatt}{1} % UPDATE ME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%
+%% Aufgaben-COMMAND
+\newcommand{\Aufgabe}[1]{
+  {
+  \noindent\textsf{\textbf{Aufgabe #1}}
+  \vspace*{0.2cm}
+  
+  }
+}
+%%%%%%%%%%%%%%
+\hypersetup{
+    pdftitle={\Fach{}: Uebungsblatt \Uebungsblatt{}},
+    pdfauthor={Ammar Saleh and Humam Hamdan}
+}
+
+
+\title{Übungsblatt \Uebungsblatt}
+\author{\Name}
+
+\begin{document}
+\thispagestyle{fancy}
+\chead{\sf \large \Fach, \Semester}
+\rhead{\sf \small \Name \\}
+\lhead{\sf \small \name \\}
+\vspace*{-1cm}
+\begin{center}
+\LARGE \sf \textbf{Übungsblatt \Uebungsblatt}
+\end{center}
+
+\Aufgabe{2}
+
+Es wurden zunächst die Buchstaben \texttt{l}, \texttt{a}, \texttt{p} in beide Datenstrukturen eingefügt.
+
+\begin{itemize}
+  \item \textbf{Stack \( S \):}
+  
+  \[
+  \begin{array}{c}
+    \fbox{p} \\
+    \fbox{a} \\
+    \fbox{l}
+  \end{array}
+  \]
+  
+  \item \textbf{Queue \( Q \):}
+  
+  \[
+   \text{Front} \rightarrow  \fbox{l} \rightarrow \fbox{a} \rightarrow \fbox{p}  \leftarrow \text{Back}
+  \]
+\end{itemize}
+
+\subsection*{a) Einfügen von \texttt{t}, \texttt{o}, \texttt{p}}
+
+\begin{itemize}
+  \item \textbf{Stack \( S \):}
+  
+  \[
+  \begin{array}{c}
+    \fbox{p} \\
+    \fbox{o} \\
+    \fbox{t} \\
+    \fbox{p} \\
+    \fbox{a} \\
+    \fbox{l}
+  \end{array}
+  \]
+
+  \item \textbf{Queue \( Q \):}
+  
+  \[
+ \fbox{l} \rightarrow \fbox{a} \rightarrow \fbox{p} \rightarrow \fbox{t} \rightarrow \fbox{o} \rightarrow \fbox{p}
+  \]
+\end{itemize}
+
+\subsection*{b) Löschen von drei Buchstaben}
+
+\begin{itemize}
+  \item \textbf{Stack \( S \) nach drei \texttt{pop()}:}
+  
+  \[
+  \begin{array}{c}
+    \fbox{p} \\
+    \fbox{o} \\
+    \fbox{t} \\
+    \fbox{p} \\
+    \fbox{a} \\
+    \fbox{l}
+  \end{array}
+  \rightarrow
+  \begin{array}{c}
+    \fbox{o} \\
+    \fbox{t} \\
+    \fbox{p} \\
+    \fbox{a} \\
+    \fbox{l}
+  \end{array}
+  \rightarrow
+    \begin{array}{c}
+    \fbox{t} \\
+    \fbox{p} \\
+    \fbox{a} \\
+    \fbox{l}
+  \end{array}
+  \rightarrow
+    \begin{array}{c}
+    \fbox{p} \\
+    \fbox{a} \\
+    \fbox{l}
+  \end{array}
+  \]
+
+  \item \textbf{Queue \( Q \) nach drei \texttt{dequeue()}:}
+  
+ \begin{align*}
+     &\fbox{l} \rightarrow \fbox{a} \rightarrow \fbox{p} \rightarrow \fbox{t}  \rightarrow \fbox{o} \rightarrow \fbox{p} \\\\
+    &\fbox{a} \rightarrow \fbox{p} \rightarrow \fbox{t} \rightarrow \fbox{o} \rightarrow \fbox{p} \\\\
+    &\fbox{p} \rightarrow \fbox{t} \rightarrow \fbox{o} \rightarrow \fbox{p} \\\\
+    &\fbox{t} \rightarrow \fbox{o} \rightarrow \fbox{p}
+  \end{align*}
+\end{itemize}
+
+\subsection*{c) Einfügen von \texttt{d}, \texttt{o}, \texttt{g}}
+
+\begin{itemize}
+  \item \textbf{Stack \( S \):}
+  
+  \[
+  \begin{array}{c}
+    \fbox{g} \\
+    \fbox{o} \\
+    \fbox{d} \\
+    \fbox{p} \\
+    \fbox{a} \\
+    \fbox{l}
+  \end{array}
+  \]
+
+  \item \textbf{Queue \( Q \):}
+  
+  \[
+  \fbox{t} \rightarrow \fbox{o} \rightarrow \fbox{p} \rightarrow \fbox{d} \rightarrow \fbox{o} \rightarrow \fbox{g}
+  \]
+\end{itemize}
+
+\end{document}

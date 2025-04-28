@@ -1,0 +1,113 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=2.5cm]{geometry}
+\setlength{\headheight}{1cm}
+\usepackage{fancyhdr}
+\usepackage[ngerman,german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,onelanguage]{algorithm2e}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage[german]{cleveref}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% EDIT THIS PART %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Fach}{Algorithmen und Datenstrukturen}
+\newcommand{\Name}{Ammar Saleh - 2329470} 
+\newcommand{\name}{Humam Hamdan - 2427300}
+\newcommand{\Gruppe}{4}
+\newcommand{\Semester}{Sommersemester 2025}
+\newcommand{\Uebungsblatt}{1} % UPDATE ME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%
+%% Aufgaben-COMMAND
+\newcommand{\Aufgabe}[1]{
+  {
+  \noindent\textsf{\textbf{Aufgabe #1}}
+  \vspace*{0.2cm}
+  }
+}
+%%%%%%%%%%%%%%
+\hypersetup{
+    pdftitle={\Fach{}: Uebungsblatt \Uebungsblatt{}},
+    pdfauthor={Ammar Saleh und Humam Hamdan}
+}
+
+
+\title{Übungsblatt \Uebungsblatt}
+\author{\Name}
+
+\begin{document}
+\thispagestyle{fancy}
+\chead{\sf \large \Fach, \Semester}
+\rhead{\sf \small \Name \\}
+\lhead{\sf \small \name \\}
+\vspace*{-1cm}
+\begin{center}
+\LARGE \sf \textbf{Übungsblatt \Uebungsblatt}
+\end{center}
+
+\Aufgabe{3}
+
+\vspace{0.5cm}
+\noindent
+\textbf{Verfahren:}
+\begin{itemize}
+  \item \texttt{S.push(e)}:
+  \begin{itemize}
+    \item \texttt{enqueue(e)} in \(Q_2\)
+    \item Übertrage alle Elemente aus \(Q_1\) nach \(Q_2\)
+    \item Tausche \(Q_1 \leftrightarrow Q_2\)
+  \end{itemize}
+  \item \texttt{S.pop()}:
+  \begin{itemize}
+    \item \texttt{dequeue()} aus \(Q_1\)
+  \end{itemize}
+  \item \texttt{S.empty()}:
+  \begin{itemize}
+    \item Überprüfe, ob \(Q_1\) leer ist\\\\\\\\
+  \end{itemize}
+\end{itemize}
+
+\subsubsection*{Beispiel:} 
+\[
+Q_1 = \emptyset, \quad Q_2 = \emptyset
+\]
+
+\subsubsection*{1. \texttt{S.push(l)}}
+
+\[
+\quad Q_1 = \emptyset,\; Q_2 = \fbox{l} \quad \rightarrow \quad Q_1 = \emptyset,\; Q_2 = \fbox{l} \quad \rightarrow \quad Q_1 = \fbox{l},\; Q_2 = \emptyset
+\]
+
+\subsubsection*{2. \texttt{S.push(a)}}
+
+\[
+Q_1 = \fbox{l},\; Q_2 = \fbox{a} \quad \rightarrow \quad Q_1 = \emptyset,\; Q_2 = \fbox{a} \rightarrow \fbox{l} \quad \rightarrow \quad Q_1 = \fbox{a} \rightarrow \fbox{l},\; Q_2 = \emptyset
+\]
+
+\subsubsection*{3. \texttt{S.pop()}}
+
+\[
+\text{Dequeue aus } Q_1 \rightarrow \fbox{a} \text{ wird entfernt}
+\]
+\[
+Q_1 = \fbox{l}
+\]
+
+\subsubsection*{4. \texttt{S.empty()}}
+
+\[
+Q_1 = \fbox{l} \quad \rightarrow \quad \text{Stack ist \textbf{nicht leer}}
+\]\\
+
+So haben wir das Verhalten eines Stacks (LIFO) mithilfe von zwei Queues nachgebildet.
+
+\end{document}

@@ -1,0 +1,58 @@
+\documentclass[a4paper,12pt]{article}
+\usepackage[margin=2.5cm]{geometry}
+\setlength{\headheight}{1cm}
+\usepackage{fancyhdr}
+\usepackage[ngerman,german]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage[ngerman,onelanguage]{algorithm2e}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{enumerate}
+\usepackage{hyperref}
+\usepackage[german]{cleveref}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%% EDIT THIS PART %%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\Fach}{Name der Veranstaltung}
+\newcommand{\Name}{Max Mustermann}
+\newcommand{\Gruppe}{2 (bei Erika Musterfrau)}
+\newcommand{\Matrikelnummer}{1234567}
+\newcommand{\Semester}{Sommersemester 2020}
+\newcommand{\Uebungsblatt}{0} % UPDATE ME
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%%%%%%%%%%%%%%
+%% Aufgaben-COMMAND
+\newcommand{\Aufgabe}[1]{
+  {
+  \noindent\textsf{\textbf{Aufgabe #1}}
+  \vspace*{0.2cm}
+  
+  }
+}
+%%%%%%%%%%%%%%
+\hypersetup{
+    pdftitle={\Fach{}: Uebungsblatt \Uebungsblatt{}},
+    pdfauthor={\Name}
+}
+
+
+
+\title{Übungsblatt \Uebungsblatt}
+\author{\Name}
+
+\begin{document}
+\thispagestyle{fancy}
+\lhead{\sf \large \Fach \\ \small \Name{} - \Matrikelnummer}
+\rhead{\sf \Semester \\  Übungsgruppe \Gruppe}
+\vspace*{-1cm}
+\begin{center}
+\LARGE \sf \textbf{Übungsblatt \Uebungsblatt}
+\end{center}
+\input{inhalt.tex}
+\end{document}
